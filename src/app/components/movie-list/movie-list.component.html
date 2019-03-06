@@ -1,3 +1,4 @@
-<p>
-  movie-list works!
-</p>
+<div class="d-flex flex-wrap justify-content-between">
+    <app-movie-list-item *ngFor="let item of movieList" [movie]=item>
+    </app-movie-list-item>
+</div>
