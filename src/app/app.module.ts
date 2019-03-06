@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { PageHomeComponent } from './page-home/page-home.component';
+import { JumbotronDirective } from './directives/jumbotron.directive';
+import { HideMeDirective } from './directives/hide-me.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageHomeComponent
+    PageHomeComponent,
+    JumbotronDirective,
+    HideMeDirective
   ],
   imports: [
     BrowserModule
