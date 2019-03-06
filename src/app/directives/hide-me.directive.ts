@@ -16,7 +16,7 @@ export class HideMeDirective implements OnInit {
     this.renderer.listen(this.$element.nativeElement, 'click', this.hideMe.bind(this))
 
     // not correct solution:
-    // this.$element.nativeElement.addEventListener("click", this.hideMe.bind(this)) 
+    // this.$element.nativeElement.addEventListener("click", this.hideMe.bind(this))
   }
 
   hideMe() {
