@@ -23,55 +23,68 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "./src/app/app.component.css":
-/*!***********************************!*\
-  !*** ./src/app/app.component.css ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
-
-/***/ }),
-
-/***/ "./src/app/app.component.html":
-/*!************************************!*\
-  !*** ./src/app/app.component.html ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n"
-
-/***/ }),
-
-/***/ "./src/app/app.component.ts":
-/*!**********************************!*\
-  !*** ./src/app/app.component.ts ***!
-  \**********************************/
-/*! exports provided: AppComponent */
+/***/ "./src/app/app-routes.ts":
+/*!*******************************!*\
+  !*** ./src/app/app-routes.ts ***!
+  \*******************************/
+/*! exports provided: routes */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "routes", function() { return routes; });
+/* harmony import */ var _pages_page_home_page_home_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pages/page-home/page-home.component */ "./src/app/pages/page-home/page-home.component.ts");
+/* harmony import */ var _pages_page_movie_list_page_movie_list_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/page-movie-list/page-movie-list.component */ "./src/app/pages/page-movie-list/page-movie-list.component.ts");
+/* harmony import */ var _pages_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/page-contact/page-contact.component */ "./src/app/pages/page-contact/page-contact.component.ts");
+
+
+
+var routes = [
+    {
+        path: '',
+        component: _pages_page_home_page_home_component__WEBPACK_IMPORTED_MODULE_0__["PageHomeComponent"]
+    },
+    {
+        path: "movies",
+        component: _pages_page_movie_list_page_movie_list_component__WEBPACK_IMPORTED_MODULE_1__["PageMovieListComponent"]
+    },
+    {
+        path: "contact",
+        component: _pages_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_2__["PageContactComponent"]
+    }
+];
+
+
+/***/ }),
+
+/***/ "./src/app/app-routing.module.ts":
+/*!***************************************!*\
+  !*** ./src/app/app-routing.module.ts ***!
+  \***************************************/
+/*! exports provided: AppRoutingModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function() { return AppRoutingModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routes */ "./src/app/app-routes.ts");
 
 
-var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.title = 'movies';
+
+
+var AppRoutingModule = /** @class */ (function () {
+    function AppRoutingModule() {
     }
-    AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-root',
-            template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
-            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
-        }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
-    ], AppComponent);
-    return AppComponent;
+    AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
+            imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(_app_routes__WEBPACK_IMPORTED_MODULE_3__["routes"])],
+            exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
+        })
+    ], AppRoutingModule);
+    return AppRoutingModule;
 }());
 
 
@@ -91,7 +104,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _directives_jumbotron_jumbotron_directive__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directives/jumbotron/jumbotron.directive */ "./src/app/directives/jumbotron/jumbotron.directive.ts");
+/* harmony import */ var _directives_hide_me_hide_me_directive__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directives/hide-me/hide-me.directive */ "./src/app/directives/hide-me/hide-me.directive.ts");
+/* harmony import */ var _pages_page_home_page_home_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/page-home/page-home.component */ "./src/app/pages/page-home/page-home.component.ts");
+/* harmony import */ var _pages_page_movie_list_page_movie_list_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/page-movie-list/page-movie-list.component */ "./src/app/pages/page-movie-list/page-movie-list.component.ts");
+/* harmony import */ var _pages_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./pages/page-contact/page-contact.component */ "./src/app/pages/page-contact/page-contact.component.ts");
+/* harmony import */ var _components_app_app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/app/app.component */ "./src/app/components/app/app.component.ts");
+/* harmony import */ var _components_movie_list_movie_list_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/movie-list/movie-list.component */ "./src/app/components/movie-list/movie-list.component.ts");
+/* harmony import */ var _components_movie_list_item_movie_list_item_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/movie-list-item/movie-list-item.component */ "./src/app/components/movie-list-item/movie-list-item.component.ts");
+/* harmony import */ var _components_menu_menu_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/menu/menu.component */ "./src/app/components/menu/menu.component.ts");
+
+
+
+// Biblioteki nie pochodzące z naszego kodu
+
+
+
+
+
+
 
 
 
@@ -102,16 +134,506 @@ var AppModule = /** @class */ (function () {
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]
+                _components_app_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
+                _pages_page_home_page_home_component__WEBPACK_IMPORTED_MODULE_6__["PageHomeComponent"],
+                _directives_jumbotron_jumbotron_directive__WEBPACK_IMPORTED_MODULE_4__["JumbotronDirective"],
+                _directives_hide_me_hide_me_directive__WEBPACK_IMPORTED_MODULE_5__["HideMeDirective"],
+                _pages_page_movie_list_page_movie_list_component__WEBPACK_IMPORTED_MODULE_7__["PageMovieListComponent"],
+                _pages_page_contact_page_contact_component__WEBPACK_IMPORTED_MODULE_8__["PageContactComponent"],
+                _components_movie_list_movie_list_component__WEBPACK_IMPORTED_MODULE_10__["MovieListComponent"],
+                _components_movie_list_item_movie_list_item_component__WEBPACK_IMPORTED_MODULE_11__["MovieListItemComponent"],
+                _components_menu_menu_component__WEBPACK_IMPORTED_MODULE_12__["MenuComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"]
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
+            bootstrap: [_components_app_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/app/app.component.css":
+/*!**************************************************!*\
+  !*** ./src/app/components/app/app.component.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/app/app.component.html":
+/*!***************************************************!*\
+  !*** ./src/app/components/app/app.component.html ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div appJumbotron>\n  <h1>Movies</h1>\n</div>\n\n<app-menu></app-menu>\n\n<router-outlet></router-outlet>"
+
+/***/ }),
+
+/***/ "./src/app/components/app/app.component.ts":
+/*!*************************************************!*\
+  !*** ./src/app/components/app/app.component.ts ***!
+  \*************************************************/
+/*! exports provided: AppComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var AppComponent = /** @class */ (function () {
+    function AppComponent() {
+        this.title = 'movies';
+    }
+    AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-root',
+            template: __webpack_require__(/*! ./app.component.html */ "./src/app/components/app/app.component.html"),
+            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/components/app/app.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], AppComponent);
+    return AppComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/menu/menu.component.css":
+/*!****************************************************!*\
+  !*** ./src/app/components/menu/menu.component.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbWVudS9tZW51LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/menu/menu.component.html":
+/*!*****************************************************!*\
+  !*** ./src/app/components/menu/menu.component.html ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav>\n  <ul class=\"nav\">\n    <li>\n      <a class=\"btn btn-default mr-1\" routerLinkActive=\"btn-primary\" [routerLinkActiveOptions]={exact:true}\n        routerLink=\"/\">\n        Strona główna\n      </a>\n    </li>\n    <li>\n      <a class=\"btn btn-default mr-1\" routerLinkActive=\"btn-primary\" [routerLinkActiveOptions]={exact:true}\n        routerLink=\"/movies\">\n        Filmy\n      </a>\n    </li>\n    <li>\n      <a class=\"btn btn-default\" routerLinkActive=\"btn-primary\" [routerLinkActiveOptions]={exact:true}\n        routerLink=\"/contact\">\n        Kontakt\n      </a>\n    </li>\n  </ul>\n</nav>"
+
+/***/ }),
+
+/***/ "./src/app/components/menu/menu.component.ts":
+/*!***************************************************!*\
+  !*** ./src/app/components/menu/menu.component.ts ***!
+  \***************************************************/
+/*! exports provided: MenuComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MenuComponent", function() { return MenuComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MenuComponent = /** @class */ (function () {
+    function MenuComponent() {
+    }
+    MenuComponent.prototype.ngOnInit = function () {
+    };
+    MenuComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-menu',
+            template: __webpack_require__(/*! ./menu.component.html */ "./src/app/components/menu/menu.component.html"),
+            styles: [__webpack_require__(/*! ./menu.component.css */ "./src/app/components/menu/menu.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], MenuComponent);
+    return MenuComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list-item/movie-list-item.component.css":
+/*!**************************************************************************!*\
+  !*** ./src/app/components/movie-list-item/movie-list-item.component.css ***!
+  \**************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbW92aWUtbGlzdC1pdGVtL21vdmllLWxpc3QtaXRlbS5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list-item/movie-list-item.component.html":
+/*!***************************************************************************!*\
+  !*** ./src/app/components/movie-list-item/movie-list-item.component.html ***!
+  \***************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  movie-list-item works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list-item/movie-list-item.component.ts":
+/*!*************************************************************************!*\
+  !*** ./src/app/components/movie-list-item/movie-list-item.component.ts ***!
+  \*************************************************************************/
+/*! exports provided: MovieListItemComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieListItemComponent", function() { return MovieListItemComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MovieListItemComponent = /** @class */ (function () {
+    function MovieListItemComponent() {
+    }
+    MovieListItemComponent.prototype.ngOnInit = function () {
+    };
+    MovieListItemComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-movie-list-item',
+            template: __webpack_require__(/*! ./movie-list-item.component.html */ "./src/app/components/movie-list-item/movie-list-item.component.html"),
+            styles: [__webpack_require__(/*! ./movie-list-item.component.css */ "./src/app/components/movie-list-item/movie-list-item.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], MovieListItemComponent);
+    return MovieListItemComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list/movie-list.component.css":
+/*!****************************************************************!*\
+  !*** ./src/app/components/movie-list/movie-list.component.css ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudHMvbW92aWUtbGlzdC9tb3ZpZS1saXN0LmNvbXBvbmVudC5jc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list/movie-list.component.html":
+/*!*****************************************************************!*\
+  !*** ./src/app/components/movie-list/movie-list.component.html ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  movie-list works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/movie-list/movie-list.component.ts":
+/*!***************************************************************!*\
+  !*** ./src/app/components/movie-list/movie-list.component.ts ***!
+  \***************************************************************/
+/*! exports provided: MovieListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MovieListComponent", function() { return MovieListComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var MovieListComponent = /** @class */ (function () {
+    function MovieListComponent() {
+    }
+    MovieListComponent.prototype.ngOnInit = function () {
+    };
+    MovieListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-movie-list',
+            template: __webpack_require__(/*! ./movie-list.component.html */ "./src/app/components/movie-list/movie-list.component.html"),
+            styles: [__webpack_require__(/*! ./movie-list.component.css */ "./src/app/components/movie-list/movie-list.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], MovieListComponent);
+    return MovieListComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/directives/hide-me/hide-me.directive.ts":
+/*!*********************************************************!*\
+  !*** ./src/app/directives/hide-me/hide-me.directive.ts ***!
+  \*********************************************************/
+/*! exports provided: HideMeDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HideMeDirective", function() { return HideMeDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var HideMeDirective = /** @class */ (function () {
+    function HideMeDirective(renderer, $element) {
+        this.renderer = renderer;
+        this.$element = $element;
+        this.appHideMe = null;
+    }
+    HideMeDirective.prototype.ngOnInit = function () {
+        this.renderer.listen(this.$element.nativeElement, 'click', this.hideMe.bind(this));
+        // not correct solution:
+        // this.$element.nativeElement.addEventListener("click", this.hideMe.bind(this))
+    };
+    HideMeDirective.prototype.hideMe = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.$element.nativeElement.remove();
+        }, this.appHideMe);
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])(),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", Number)
+    ], HideMeDirective.prototype, "appHideMe", void 0);
+    HideMeDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[appHideMe]'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["Renderer2"],
+            _angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], HideMeDirective);
+    return HideMeDirective;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/directives/jumbotron/jumbotron.directive.ts":
+/*!*************************************************************!*\
+  !*** ./src/app/directives/jumbotron/jumbotron.directive.ts ***!
+  \*************************************************************/
+/*! exports provided: JumbotronDirective */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JumbotronDirective", function() { return JumbotronDirective; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var JumbotronDirective = /** @class */ (function () {
+    function JumbotronDirective($element) {
+        this.$element = $element;
+    }
+    JumbotronDirective.prototype.ngOnInit = function () {
+        this.$element.nativeElement.classList.add("jumbotron");
+    };
+    JumbotronDirective = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Directive"])({
+            selector: '[appJumbotron]'
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_1__["ElementRef"]])
+    ], JumbotronDirective);
+    return JumbotronDirective;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/page-contact/page-contact.component.css":
+/*!***************************************************************!*\
+  !*** ./src/app/pages/page-contact/page-contact.component.css ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3BhZ2UtY29udGFjdC9wYWdlLWNvbnRhY3QuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/page-contact/page-contact.component.html":
+/*!****************************************************************!*\
+  !*** ./src/app/pages/page-contact/page-contact.component.html ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  page-contact works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/page-contact/page-contact.component.ts":
+/*!**************************************************************!*\
+  !*** ./src/app/pages/page-contact/page-contact.component.ts ***!
+  \**************************************************************/
+/*! exports provided: PageContactComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageContactComponent", function() { return PageContactComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PageContactComponent = /** @class */ (function () {
+    function PageContactComponent() {
+    }
+    PageContactComponent.prototype.ngOnInit = function () {
+    };
+    PageContactComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-page-contact',
+            template: __webpack_require__(/*! ./page-contact.component.html */ "./src/app/pages/page-contact/page-contact.component.html"),
+            styles: [__webpack_require__(/*! ./page-contact.component.css */ "./src/app/pages/page-contact/page-contact.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PageContactComponent);
+    return PageContactComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/page-home/page-home.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/pages/page-home/page-home.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3BhZ2UtaG9tZS9wYWdlLWhvbWUuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/page-home/page-home.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/pages/page-home/page-home.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  page-home works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/page-home/page-home.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/pages/page-home/page-home.component.ts ***!
+  \********************************************************/
+/*! exports provided: PageHomeComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageHomeComponent", function() { return PageHomeComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PageHomeComponent = /** @class */ (function () {
+    function PageHomeComponent() {
+    }
+    PageHomeComponent.prototype.addNumbers = function (a, b) {
+        if (typeof (a) != 'number') {
+            return null;
+        }
+        if (typeof (b) != 'number') {
+            return null;
+        }
+        return a + b;
+    };
+    PageHomeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-page-home',
+            template: __webpack_require__(/*! ./page-home.component.html */ "./src/app/pages/page-home/page-home.component.html"),
+            styles: [__webpack_require__(/*! ./page-home.component.css */ "./src/app/pages/page-home/page-home.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PageHomeComponent);
+    return PageHomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/pages/page-movie-list/page-movie-list.component.css":
+/*!*********************************************************************!*\
+  !*** ./src/app/pages/page-movie-list/page-movie-list.component.css ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3BhZ2UtbW92aWUtbGlzdC9wYWdlLW1vdmllLWxpc3QuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/pages/page-movie-list/page-movie-list.component.html":
+/*!**********************************************************************!*\
+  !*** ./src/app/pages/page-movie-list/page-movie-list.component.html ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  page-movie-list works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/pages/page-movie-list/page-movie-list.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/pages/page-movie-list/page-movie-list.component.ts ***!
+  \********************************************************************/
+/*! exports provided: PageMovieListComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageMovieListComponent", function() { return PageMovieListComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var PageMovieListComponent = /** @class */ (function () {
+    function PageMovieListComponent() {
+    }
+    PageMovieListComponent.prototype.ngOnInit = function () {
+    };
+    PageMovieListComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-page-movie-list',
+            template: __webpack_require__(/*! ./page-movie-list.component.html */ "./src/app/pages/page-movie-list/page-movie-list.component.html"),
+            styles: [__webpack_require__(/*! ./page-movie-list.component.css */ "./src/app/pages/page-movie-list/page-movie-list.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], PageMovieListComponent);
+    return PageMovieListComponent;
 }());
 
 
