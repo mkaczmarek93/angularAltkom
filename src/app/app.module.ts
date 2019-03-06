@@ -1,14 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './components/app/app.component';
-import { PageHomeComponent } from './pages/page-home/page-home.component';
+// Biblioteki nie pochodzące z naszego kodu
+
+import { AppRoutingModule } from './app-routing.module';
+
 import { JumbotronDirective } from './directives/jumbotron/jumbotron.directive';
 import { HideMeDirective } from './directives/hide-me/hide-me.directive';
+
+import { PageHomeComponent } from './pages/page-home/page-home.component';
 import { PageMovieListComponent } from './pages/page-movie-list/page-movie-list.component';
 import { PageContactComponent } from './pages/page-contact/page-contact.component';
+
+import { AppComponent } from './components/app/app.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieListItemComponent } from './components/movie-list-item/movie-list-item.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +26,12 @@ import { MovieListItemComponent } from './components/movie-list-item/movie-list-
     PageMovieListComponent,
     PageContactComponent,
     MovieListComponent,
-    MovieListItemComponent
+    MovieListItemComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
