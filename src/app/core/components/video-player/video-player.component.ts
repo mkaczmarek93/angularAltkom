@@ -10,8 +10,8 @@ import { Movie } from 'src/app/core/interfaces/movie.interface';
 })
 export class VideoPlayerComponent implements OnInit {
 
-  movieUrl = 'https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4'
-  @Input() movie: Movie = null
+  movieUrl = 'https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4';
+  @Input() movie: Movie = null;
 
   constructor(
     private $element: ElementRef
@@ -22,7 +22,7 @@ export class VideoPlayerComponent implements OnInit {
 
   fullscreen() {
     if (!document['fullscreenElement']) {
-      this.$element.nativeElement.requestFullscreen()
+      this.$element.nativeElement.requestFullscreen();
     } else {
       document.exitFullscreen();
     }
