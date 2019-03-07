@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 
 import { LocalStorageService } from '../local-storage/local-storage.service';
-import { resolve } from 'q';
+
+import { Status } from '../../interfaces/status.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class AuthService {
     private localStorageService: LocalStorageService
   ) { }
 
-  register(formData: any): any {
+  register(formData): Promise<Status> {
     return new Promise((resolve, reject) => {
       const users = this.localStorageService.get('users') || [];
       users.push(formData);
@@ -23,7 +24,7 @@ export class AuthService {
     })
   }
 
-  authenticate(formData) {
+  authenticate(formData): Promise<Status> {
     return new Promise((resolve, reject) => {
       const users = this.localStorageService.get('users') || [];
       const status = users.find((user) => {
@@ -38,10 +39,21 @@ export class AuthService {
     })
   }
 
-  saveLoggedUser(user): any {
+  saveLoggedUser(user): Promise<Status> {
     return new Promise((resolve, rejected) => {
-        this.localStorageService.save('logged-user', user.email);
+      this.localStorageService.save('logged-user', user.email);
+      setTimeout(resolve, 200, { status: 'ok' })
+    })
+  }
+
+  isUserLogged(): Promise<Status> {
+    return new Promise((resolve, rejected) => {
+      const status = this.localStorageService.get('logged-user');
+      if (status) {
         setTimeout(resolve, 200, { status: 'ok' })
+      } else {
+        setTimeout(rejected, 200, { status: 'err' })
+      }
     })
   }
 

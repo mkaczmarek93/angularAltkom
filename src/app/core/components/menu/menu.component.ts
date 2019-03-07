@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+
+import { filter } from 'rxjs/operators'
+
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +12,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  isLoggedUser = false;
+
+  constructor(
+    private router: Router,
+    private auth: AuthService
+  ) { }
 
   ngOnInit() {
+    this.router.events
+      .pipe(
+        filter((event) => event instanceof NavigationEnd)
+      )
+      .subscribe(this.verifyLoggedUser.bind(this));
+
+    this.verifyLoggedUser();
   }
 
+  async verifyLoggedUser() {
+    try {
+      await this.auth.isUserLogged()
+      this.isLoggedUser = true
+    } catch (err) {
+      this.isLoggedUser = false
+    }
+  }
 }
