@@ -1,3 +1,98 @@
-<p>
-  page-user-register works!
-</p>
+<div>
+  <form
+    [formGroup]="registerForm"
+    (ngSubmit)="handleSubmit()"
+  >
+
+    <div class="form-group">
+      <label>
+        E-mail
+        <sup class="text-danger">*</sup>
+      </label>
+      <input
+        required
+        formControlName="email"
+        type="email"
+        class="form-control"
+        placeholder="Wpisz e-mail"
+        name="email"
+      >
+      <small class="text-danger">
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>
+        Hasło
+        <sup class="text-danger">*</sup>
+      </label>
+      <input
+        required
+        formControlName="password"
+        type="password"
+        class="form-control"
+        placeholder="Wpisz hasło"
+        name="password"
+      >
+      <small class="text-danger">
+      </small>
+    </div>
+
+    <div class="form-group">
+      <label>Potwierdź hasło</label>
+      <sup class="text-danger">*</sup>
+      <input
+        required
+        formControlName="confirmPassword"
+        type="password"
+        class="form-control"
+        placeholder="Wpisz hasło"
+        name="confirmPassword"
+      >
+      <small class="text-danger">
+      </small>
+    </div>
+
+    <div formGroupName="person">
+      <div class="form-group">
+        <label>
+          Imię
+          <sup class="text-danger">*</sup>
+        </label>
+        <input
+          required
+          formControlName="name"
+          type="text"
+          class="form-control"
+          placeholder="Wpisz imię"
+          name="name"
+        >
+        <small class="text-danger">
+        </small>
+      </div>
+
+      <div class="form-group">
+        <label>
+          Nazwisko
+          <sup class="text-danger">*</sup>
+        </label>
+        <input
+          required
+          formControlName="surname"
+          type="text"
+          class="form-control"
+          placeholder="Wpisz nazwisko"
+          name="surname"
+        >
+        <small class="text-danger">
+        </small>
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+    >
+      Zarejestruj
+    </button>
+  </form>
+</div>
