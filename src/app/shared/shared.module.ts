@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthService } from './services/auth.service';
-import { LocalStorageService } from './services/local-storage.service';
+import { AuthService } from './services/auth/auth.service';
+import { LocalStorageService } from './services/local-storage/local-storage.service';
 
 @NgModule({
   declarations: [],

@@ -1,3 +1,11 @@
+<div
+  role="alert"
+  class="alert alert-danger"
+  *ngIf="errorMessage"
+>
+  {{errorMessage}}
+</div>
+
 <div>
   <form
     novalidate
@@ -18,7 +26,7 @@
         name="email"
         #email="ngModel"
         [(ngModel)]="user.email"
-        maxlength="5"
+        maxlength="50"
         minlength="3"
       >
       <!-- <pre>{{email.errors | json}}</pre> -->
@@ -45,7 +53,7 @@
         name="password"
         #password="ngModel"
         [(ngModel)]="user.password"
-        maxlength="5"
+        maxlength="50"
         minlength="3"
       >
       <!-- <pre>{{password.errors | json}}</pre> -->

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { AuthService } from 'src/app/shared/services/auth/auth.service';
 
 @Component({
   selector: 'app-page-user-register',
@@ -9,6 +9,8 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./page-user-register.component.css']
 })
 export class PageUserRegisterComponent implements OnInit {
+
+  isRegistrationSuccess = false;
 
   registerForm = new FormGroup({
     email: new FormControl(''),
@@ -29,8 +31,11 @@ export class PageUserRegisterComponent implements OnInit {
 
   async handleSubmit() {
     const formData = this.registerForm.getRawValue();
-    const status = await this.authService.register(formData);
-    console.log(status)
+    const result = await this.authService.register(formData);
+    console.log(result)
+    if (result.status === 'ok') {
+      this.isRegistrationSuccess = true
+    }
   }
 
 }

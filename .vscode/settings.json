@@ -3,12 +3,14 @@
         "Adres",
         "Altkom",
         "DOOOOIT",
+        "Dziękujemy",
         "Hasło",
         "Imię",
         "Injectable",
         "Kontakt",
         "Logowanie",
         "Nazwisko",
+        "Niepoprawny",
         "Polski",
         "Potwierdź",
         "Powtórz",
@@ -31,6 +33,7 @@
         "polyfills",
         "predeploy",
         "puste",
+        "rejestrację",
         "tslib"
     ]
 }

@@ -1,7 +1,16 @@
+<div
+  role="alert"
+  class="alert alert-success"
+  *ngIf="isRegistrationSuccess"
+>
+  Dziękujemy za rejestrację!
+</div>
+
 <div>
   <form
     [formGroup]="registerForm"
     (ngSubmit)="handleSubmit()"
+    *ngIf="!isRegistrationSuccess"
   >
 
     <div class="form-group">
