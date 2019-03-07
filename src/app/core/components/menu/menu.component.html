@@ -1,5 +1,5 @@
 <nav class="mb-4">
-  <ul class="nav">
+  <ul class="nav float-left">
     <li>
       <a class="btn btn-outline-primary" routerLinkActive="btn-primary text-white" [routerLinkActiveOptions]={exact:true}
         routerLink="/">
@@ -19,4 +19,15 @@
       </a>
     </li>
   </ul>
+
+  <ul class="nav float-right">
+    <li>
+      <a class="btn btn-outline-success mr-1" routerLink="/user/register">Rejestracja</a>
+    </li>
+    <li>
+      <a class="btn btn-outline-success" routerLink="/user/login">Logowanie</a>
+    </li>
+  </ul>
+
+  <div class=""></div>
 </nav>

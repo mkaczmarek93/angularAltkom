@@ -12,7 +12,7 @@ export const routes: Routes = [
         component: PageHomeComponent
     },
     {
-        path: "movies",
+        path: 'movies',
         children: [
             {
                 path: '',
@@ -25,11 +25,15 @@ export const routes: Routes = [
         ]
     },
     {
-        path: "contact",
+        path: 'contact',
         component: PageContactComponent
     },
     {
-        path: "**",
+        path: 'user',
+        loadChildren: '../user/user.module#UserModule'
+    },
+    {
+        path: '**',
         component: PageNotFoundComponent
     }
 ];
