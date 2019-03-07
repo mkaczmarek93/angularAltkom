@@ -20,8 +20,6 @@ export class AuthService {
       setTimeout(() => {
         resolve({ status: 'ok' });
       }, 200)
-
-      // setTimeout(resolve, 200, { status: 'ok' })
     })
   }
 
@@ -37,6 +35,13 @@ export class AuthService {
       } else {
         reject({ status: 'err' })
       }
+    })
+  }
+
+  saveLoggedUser(user): any {
+    return new Promise((resolve, rejected) => {
+        this.localStorageService.save('logged-user', user.email);
+        setTimeout(resolve, 200, { status: 'ok' })
     })
   }
 

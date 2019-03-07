@@ -28,6 +28,7 @@ export class PageUserLoginComponent implements OnInit {
   async handleSubmit() {
     try {
       await this.auth.authenticate(this.user);
+      await this.auth.saveLoggedUser(this.user);
       this.router.navigate(['/']);
     } catch (err) {
       this.errorMessage = ' Niepoprawny e-mail lub hasło.';
