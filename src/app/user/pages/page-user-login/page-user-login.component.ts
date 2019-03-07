@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageUserLoginComponent implements OnInit {
 
+  user = {
+    email: null,
+    password: null
+  }
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  handleSubmit() {
+    console.log(this.user)
+  }
 }

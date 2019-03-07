@@ -1,20 +1,26 @@
 <nav class="mb-4">
   <ul class="nav float-left">
     <li>
-      <a class="btn btn-outline-primary" routerLinkActive="btn-primary text-white" [routerLinkActiveOptions]={exact:true}
-        routerLink="/">
+      <a class="btn btn-outline-primary"
+         routerLinkActive="btn-primary text-white"
+         [routerLinkActiveOptions]={exact:true}
+         routerLink="/">
         Strona główna
       </a>
     </li>
     <li>
-      <a class="btn btn-outline-primary ml-1 mr-1" routerLinkActive="btn-primary text-white" [routerLinkActiveOptions]={exact:true}
-        routerLink="/movies">
+      <a class="btn btn-outline-primary ml-1 mr-1"
+         routerLinkActive="btn-primary text-white"
+         [routerLinkActiveOptions]={exact:true}
+         routerLink="/movies">
         Filmy
       </a>
     </li>
     <li>
-      <a class="btn btn-outline-primary" routerLinkActive="btn-primary text-white" [routerLinkActiveOptions]={exact:true}
-        routerLink="/contact">
+      <a class="btn btn-outline-primary"
+         routerLinkActive="btn-primary text-white"
+         [routerLinkActiveOptions]={exact:true}
+         routerLink="/contact">
         Kontakt
       </a>
     </li>
@@ -22,10 +28,16 @@
 
   <ul class="nav float-right">
     <li>
-      <a class="btn btn-outline-success mr-1" routerLink="/user/register">Rejestracja</a>
+      <a class="btn btn-outline-success mr-1"
+         routerLink="/user/register"
+         routerLinkActive="btn-success text-white"
+         [routerLinkActiveOptions]={exact:true}>Rejestracja</a>
     </li>
     <li>
-      <a class="btn btn-outline-success" routerLink="/user/login">Logowanie</a>
+      <a class="btn btn-outline-success"
+         routerLink="/user/login"
+         routerLinkActive="btn-success text-white"
+         [routerLinkActiveOptions]={exact:true}>Logowanie</a>
     </li>
   </ul>
 

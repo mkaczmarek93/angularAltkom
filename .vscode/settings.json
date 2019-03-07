@@ -1,13 +1,16 @@
 {
     "cSpell.words": [
+        "Adres",
         "Altkom",
         "DOOOOIT",
+        "Hasło",
         "Injectable",
         "Kontakt",
         "Logowanie",
         "Polski",
         "Rejestracja",
         "Strona",
+        "Zaloguj",
         "codelyzer",
         "devkit",
         "doit",
@@ -16,6 +19,7 @@
         "jasminewd",
         "kaczmarek",
         "michal",
+        "minlength",
         "polyfills",
         "predeploy",
         "tslib"

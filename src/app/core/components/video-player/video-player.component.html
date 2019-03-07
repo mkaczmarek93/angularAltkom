@@ -1,9 +1,15 @@
 <div>
-  <video #player [src]="movieUrl" [poster]="movie.thumb_url"></video>
+  <video #player
+         [src]="movieUrl"
+         [poster]="movie.thumb_url"></video>
   <br>
-  <div class="btn-group btn-group-toggle d-block" data-toggle="buttons">
-    <button class="btn btn-info" (click)="player.play()">Play</button>
-    <button class="btn btn-info" (click)="player.pause()">Pause</button>
-    <button class="btn btn-info" (click)="fullscreen()">Fullscreen</button>
+  <div class="btn-group btn-group-toggle d-block"
+       data-toggle="buttons">
+    <button class="btn btn-info"
+            (click)="player.play()">Play</button>
+    <button class="btn btn-info"
+            (click)="player.pause()">Pause</button>
+    <button class="btn btn-info"
+            (click)="fullscreen()">Fullscreen</button>
   </div>
 </div>

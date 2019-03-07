@@ -1,9 +1,13 @@
 <div class="card">
-  <img [src]="movie.thumb_url" class="card-img-top" alt="movie.title" (click)="redirectMovieProfile()">
+  <img [src]="movie.thumb_url"
+       class="card-img-top"
+       alt="movie.title"
+       (click)="redirectMovieProfile()">
   <div class="card-body">
     <h5 class="card-title">
       {{movie?.title}}
     </h5>
-    <span class="rate" [style.width]="buildRate()"></span>
+    <span class="rate"
+          [style.width]="buildRate()"></span>
   </div>
 </div>
