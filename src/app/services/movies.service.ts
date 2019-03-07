@@ -16,6 +16,12 @@ export class MoviesService {
   fetchMovies() {
     return this.http.get<MovieList>(environment.moviesUrl).toPromise();
   }
+  
+  async fetchPromoMovies() {
+    const movies = await this.fetchMovies()
+    movies.length = 3
+    return movies
+  }
 
   async fetchMovieById(movieId: string) {
     // not correct
