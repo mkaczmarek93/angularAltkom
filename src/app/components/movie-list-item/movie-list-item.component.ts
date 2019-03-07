@@ -9,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class MovieListItemComponent implements OnInit {
 
-  @Input() movie: null;
+  @Input() movie = null;
 
   constructor(
     private router: Router

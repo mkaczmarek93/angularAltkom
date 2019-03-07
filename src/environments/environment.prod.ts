@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  moviesUrl: 'angularAltkom/assets/movies.json'
 };

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { MovieList } from 'src/app/interfaces/movie-list.interface';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class MoviesService {
   ) { }
 
   fetchMovies() {
-    return this.http.get<MovieList>('/assets/movies.json').toPromise();
+    return this.http.get<MovieList>(environment.moviesUrl).toPromise();
   }
 
   async fetchMovieById(movieId: string) {
