@@ -4,6 +4,7 @@ import { LocalStorageService } from '../local-storage/local-storage.service';
 
 import { Status } from '../../interfaces/status.interface';
 import { User } from '../../interfaces/user.interface';
+import { resolve } from 'url';
 
 @Injectable({
   providedIn: 'root'
@@ -78,13 +79,19 @@ export class AuthService {
       const loggedUser = this.localStorageService.get('logged-user');
       if (loggedUser) {
         this.getUserByEmail(loggedUser)
-        .then((user)=>{
-          setTimeout(resolve, 200, `${user.person.name} ${user.person.surname}`);
-        });
+          .then((user) => {
+            setTimeout(resolve, 200, `${user.person.name} ${user.person.surname}`);
+          });
       } else {
         setTimeout(rejected, 200, 'Unknown')
       }
     })
   }
 
+  destroySession(): Promise<Status> {
+    return new Promise((resolve) => {
+      this.localStorageService.remove('logged-user');
+      setTimeout(resolve, 200, { status: 'ok' });
+    })
+  }
 }
