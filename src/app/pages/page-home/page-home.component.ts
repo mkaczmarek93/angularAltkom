@@ -1,19 +1,30 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
+import { MoviesService } from 'src/app/services/movies.service';
+import { MovieList } from 'src/app/interfaces/movie-list.interface';
+
 @Component({
   selector: 'app-page-home',
   templateUrl: './page-home.component.html',
   styleUrls: ['./page-home.component.css']
 })
-export class PageHomeComponent {
+export class PageHomeComponent implements OnInit {
 
-  constructor() { }
+  movies: MovieList = null;
 
-  addNumbers(a,b) {
-    if (typeof(a) != 'number') {
+  constructor(
+    private moviesService: MoviesService
+  ) { }
+
+  async ngOnInit() {
+    this.movies = await this.moviesService.fetchMovies()
+  }
+
+  addNumbers(a, b) {
+    if (typeof (a) != 'number') {
       return null
     }
-    if (typeof(b) != 'number') {
+    if (typeof (b) != 'number') {
       return null
     }
     return a + b

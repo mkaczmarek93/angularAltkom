@@ -17,6 +17,8 @@ import { AppComponent } from './components/app/app.component';
 import { MovieListComponent } from './components/movie-list/movie-list.component';
 import { MovieListItemComponent } from './components/movie-list-item/movie-list-item.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { PageMovieProfileComponent } from './pages/page-movie-profile/page-movie-profile.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,11 +31,13 @@ import { MenuComponent } from './components/menu/menu.component';
     MovieListComponent,
     MovieListItemComponent,
     MenuComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PageMovieProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
