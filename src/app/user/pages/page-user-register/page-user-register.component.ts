@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 
+import { AuthService } from 'src/app/shared/services/auth.service';
+
 @Component({
   selector: 'app-page-user-register',
   templateUrl: './page-user-register.component.html',
@@ -18,13 +20,17 @@ export class PageUserRegisterComponent implements OnInit {
     })
   });
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
   }
 
-  handleSubmit() {
-    console.log(this.registerForm.getRawValue())
+  async handleSubmit() {
+    const formData = this.registerForm.getRawValue();
+    const status = await this.authService.register(formData);
+    console.log(status)
   }
 
 }
