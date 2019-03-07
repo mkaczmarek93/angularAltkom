@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Movie } from 'src/app/interfaces/movie.interface';
+import { Movie } from 'src/app/core/interfaces/movie.interface';
 
 @Component({
   selector: 'app-movie-list-item',

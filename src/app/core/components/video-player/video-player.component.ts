@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy, ElementRef } from '@angular/core';
 
-import { Movie } from 'src/app/interfaces/movie.interface';
+import { Movie } from 'src/app/core/interfaces/movie.interface';
 
 @Component({
   selector: 'app-video-player',
