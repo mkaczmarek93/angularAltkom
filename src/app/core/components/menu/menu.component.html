@@ -59,11 +59,11 @@
     *ngIf="isLoggedUser"
   >
     <li>
-      NAZWA UŻYTKOWNIKA
+      {{loggedUserName}}
     </li>
     <li>
       <a
-      class="btn btn-outline-danger"
+        class="btn btn-outline-danger"
         routerLink="/user/logout"
         routerLinkActive="btn-danger text-white"
         [routerLinkActiveOptions]={exact:true}

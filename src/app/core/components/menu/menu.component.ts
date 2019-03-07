@@ -13,6 +13,7 @@ import { AuthService } from 'src/app/shared/services/auth/auth.service';
 export class MenuComponent implements OnInit {
 
   isLoggedUser = false;
+  loggedUserName = ''
 
   constructor(
     private router: Router,
@@ -31,10 +32,11 @@ export class MenuComponent implements OnInit {
 
   async verifyLoggedUser() {
     try {
-      await this.auth.isUserLogged()
-      this.isLoggedUser = true
+      await this.auth.isUserLogged();
+      this.isLoggedUser = true;
+      this.loggedUserName = await this.auth.getLoggedUserName();
     } catch (err) {
-      this.isLoggedUser = false
+      this.isLoggedUser = false;
     }
   }
 }
