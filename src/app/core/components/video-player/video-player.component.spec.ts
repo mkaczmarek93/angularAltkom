@@ -9,6 +9,8 @@ describe('VideoPlayerComponent', () => {
   let fixture: ComponentFixture<VideoPlayerComponent>;
   let $element: HTMLElement = null;
 
+  let movie = null;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [VideoPlayerComponent]
@@ -20,16 +22,16 @@ describe('VideoPlayerComponent', () => {
     fixture = TestBed.createComponent(VideoPlayerComponent);
     component = fixture.componentInstance;
     $element = fixture.debugElement.nativeElement;
-    prepareComponent()
+    setup()
   });
 
   afterEach(() => {
     fixture.debugElement.nativeElement.remove();
   });
 
-  const prepareComponent = () => {
+  function setup() {
     // Given
-    const movie = <Movie>{
+    movie = <Movie>{
       thumb_url: 'fake-thumb_url'
     };
     component.movie = movie;
@@ -73,15 +75,15 @@ describe('VideoPlayerComponent', () => {
         expect(event.status).toEqual(status[actionNumber]);
       });
 
-      // When
-      const $play = $element.querySelectorAll('button')[0];
-      $play.click();
-      actionNumber = 1;
-      const $pause = $element.querySelectorAll('button')[1];
-      $pause.click();
+    // When
+    const $play = $element.querySelectorAll('button')[0];
+    $play.click();
+    actionNumber = 1;
+    const $pause = $element.querySelectorAll('button')[1];
+    $pause.click();
 
-      // Then
-      expect(component.play).toHaveBeenCalled();
-      expect(component.pause).toHaveBeenCalled();
+    // Then
+    expect(component.play).toHaveBeenCalled();
+    expect(component.pause).toHaveBeenCalled();
   });
 });
