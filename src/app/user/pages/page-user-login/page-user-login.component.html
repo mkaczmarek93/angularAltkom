@@ -1,6 +1,6 @@
 <div
   role="alert"
-  class="alert alert-danger"
+  class="alert alert-danger login-result-message"
   *ngIf="errorMessage"
 >
   {{errorMessage}}
@@ -20,7 +20,7 @@
       <input
         required
         type="email"
-        class="form-control"
+        class="form-control field-email"
         [class.is-invalid]="email.invalid && email.touched"
         placeholder="Wpisz e-mail"
         name="email"
@@ -47,7 +47,7 @@
       <input
         required
         type="password"
-        class="form-control"
+        class="form-control field-password"
         [class.is-invalid]="password.invalid && password.touched"
         placeholder="Wpisz hasło"
         name="password"
@@ -69,7 +69,7 @@
     <button
       type="submit"
       [disabled]="loginForm.invalid"
-      class="btn btn-primary"
+      class="btn btn-primary button-submit"
     >
       Zaloguj
     </button>
