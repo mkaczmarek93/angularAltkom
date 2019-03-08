@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { MoviesService } from 'src/app/core/services/movies.service';
 import { MovieList } from 'src/app/core/interfaces/movie-list.interface';
@@ -17,7 +17,11 @@ export class PageHomeComponent implements OnInit {
   ) { }
 
   async ngOnInit() {
-    this.movies = await this.moviesService.fetchPromoMovies()
+    this.movies = await this.getPromoMovies();
+  }
+
+  async getPromoMovies() {
+    return await this.moviesService.fetchPromoMovies();
   }
 
   addNumbers(a, b) {
