@@ -7,7 +7,7 @@ import { Movie } from 'src/app/core/interfaces/movie.interface';
   selector: 'app-movie-list-item',
   templateUrl: './movie-list-item.component.html',
   styleUrls: ['./movie-list-item.component.css'],
-  encapsulation: ViewEncapsulation.ShadowDom,
+  encapsulation: ViewEncapsulation.Native,
   changeDetection: ChangeDetectionStrategy.OnPush // Odświeżenie komponentu tylko kiedy są w nim jakieś zminny
 })
 export class MovieListItemComponent implements OnInit {
