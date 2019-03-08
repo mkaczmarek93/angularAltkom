@@ -31,7 +31,7 @@ describe('PageMovieListComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(PageMovieListComponent);
     component = fixture.componentInstance;
-    $element = fixture.debugElement.nativeElement
+    $element = fixture.debugElement.nativeElement;
   });
 
   afterEach(()=>{
@@ -64,7 +64,7 @@ describe('PageMovieListComponent', () => {
 
     // 3. Zakończ wszystkie asynchroniczne akcje
     flush();
-    expect(component.movies.length).toEqual(4);
+    expect(component.movies.length).toBeGreaterThan(3);
 
     // 4. Aktualizacja widoku
     fixture.detectChanges();
