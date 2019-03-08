@@ -38,9 +38,11 @@ describe('VideoPlayerComponent', () => {
     component.status = new EventEmitter();
     component.player = {
       nativeElement: {
-        play: () => { }
+        play: Function,
+        pause: Function
       }
     };
+
     fixture.detectChanges();
   }
 
@@ -49,7 +51,8 @@ describe('VideoPlayerComponent', () => {
   });
 
   it('should video playing after click to play button', () => {
-    spyOn(component, 'play');
+    spyOn(component.player.nativeElement, 'play');
+    spyOn(component.player.nativeElement, 'pause');
     component.status
       .subscribe((event) => {
         // Then
@@ -61,29 +64,25 @@ describe('VideoPlayerComponent', () => {
     $play.click();
 
     // Then
-    expect(component.play).toHaveBeenCalled();
+    expect(component.player.nativeElement.play).toHaveBeenCalled();
+    expect(component.player.nativeElement.pause).not.toHaveBeenCalled();
   });
 
   it('should video pause after click pause button', () => {
-    spyOn(component, 'play');
-    spyOn(component, 'pause');
-    const statuses = ['playing', 'paused'];
-    let actionNumber = 0;
+    spyOn(component.player.nativeElement, 'play');
+    spyOn(component.player.nativeElement, 'pause');
     component.status
       .subscribe((event) => {
         // Then
-        expect(event.status).toEqual(status[actionNumber]);
+        expect(event.status).toEqual('paused');
       });
 
     // When
-    const $play = $element.querySelectorAll('button')[0];
-    $play.click();
-    actionNumber = 1;
     const $pause = $element.querySelectorAll('button')[1];
     $pause.click();
 
     // Then
-    expect(component.play).toHaveBeenCalled();
-    expect(component.pause).toHaveBeenCalled();
+    expect(component.player.nativeElement.play).not.toHaveBeenCalled();
+    expect(component.player.nativeElement.pause).toHaveBeenCalled();
   });
 });
