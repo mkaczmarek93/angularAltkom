@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { PageUserLoginComponent } from './page-user-login.component';
 
@@ -8,7 +10,13 @@ describe('PageUserLoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PageUserLoginComponent ]
+      declarations: [
+         PageUserLoginComponent 
+        ],
+        imports: [
+          FormsModule,
+          RouterTestingModule
+        ]
     })
     .compileComponents();
   }));
