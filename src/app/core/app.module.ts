@@ -22,6 +22,8 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 import { MovieListItemComponent } from './components/movie-list-item/movie-list-item.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { VideoPlayerComponent } from './components/video-player/video-player.component';
+import { PageAuthorsComponent } from './pages/page-authors/page-authors.component';
+import { BaseFooterComponent } from './components/base-footer/base-footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { VideoPlayerComponent } from './components/video-player/video-player.com
     MenuComponent,
     PageNotFoundComponent,
     PageMovieProfileComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    PageAuthorsComponent,
+    BaseFooterComponent
   ],
   imports: [
     BrowserModule,
