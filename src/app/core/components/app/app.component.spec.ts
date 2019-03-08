@@ -7,6 +7,10 @@ import { BaseFooterComponent } from '../base-footer/base-footer.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('AppComponent', () => {
+
+  let fixture = null;
+  let component: AppComponent = null;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
@@ -19,24 +23,26 @@ describe('AppComponent', () => {
         BaseFooterComponent
       ],
     }).compileComponents();
+
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.debugElement.componentInstance;
   }));
 
+  afterEach(() => {
+    fixture.debugElement.nativeElement.remove();
+  });
+
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    expect(component).toBeTruthy();
   });
 
   it(`should have as title 'movies'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('movies');
+    expect(component.title).toEqual('movies');
   });
 
   // xit wyłącza test
   // fit odpala tylko te testy
   it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Movies');

@@ -19,6 +19,10 @@ describe('MovieListItemComponent', () => {
       .compileComponents();
   }));
 
+  afterEach(()=>{
+    fixture.debugElement.nativeElement.remove();
+  });
+
   beforeEach(() => {
     fixture = TestBed.createComponent(MovieListItemComponent);
     component = fixture.componentInstance;

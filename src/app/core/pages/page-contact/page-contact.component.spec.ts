@@ -19,6 +19,10 @@ describe('PageContactComponent', () => {
     fixture.detectChanges();
   });
 
+  afterEach(()=>{
+    fixture.debugElement.nativeElement.remove();
+  });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
