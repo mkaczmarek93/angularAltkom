@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { AuthService } from './services/auth/auth.service';
-import { LocalStorageService } from './services/local-storage/local-storage.service';
+
+import { CacheInterceptor } from './interceptors/cache.interceptor';
 
 @NgModule({
   declarations: [],
@@ -10,7 +13,11 @@ import { LocalStorageService } from './services/local-storage/local-storage.serv
   ],
   providers: [
     AuthService,
-    LocalStorageService
+    {
+      useClass: CacheInterceptor,
+      provide: HTTP_INTERCEPTORS,
+      multi: true
+    }
   ]
 })
 export class SharedModule { }
