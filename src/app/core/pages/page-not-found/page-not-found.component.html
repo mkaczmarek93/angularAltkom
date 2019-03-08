@@ -1,3 +1,8 @@
-<p>
-  page-not-found works!
-</p>
+<app-video-player
+  [movie]="movie"
+  (status)="handleStatus($event)"
+>
+  <!--  (status)  <-- nasłuchuje na taki events -->
+</app-video-player>
+
+<p>{{playerStatus}}</p>
