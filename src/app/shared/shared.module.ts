@@ -5,9 +5,15 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services/auth/auth.service';
 
 import { CacheInterceptor } from './interceptors/cache.interceptor';
+import { UserDisplayNamePipe } from './pipes/user-display-name.pipe';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    UserDisplayNamePipe
+  ],
+  exports: [
+    UserDisplayNamePipe
+  ],
   imports: [
     CommonModule
   ],

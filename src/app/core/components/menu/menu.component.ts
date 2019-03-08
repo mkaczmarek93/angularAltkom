@@ -13,7 +13,7 @@ import { AuthService } from 'src/app/shared/services/auth/auth.service';
 export class MenuComponent implements OnInit {
 
   isLoggedUser = false;
-  loggedUserName = ''
+  loggedUserName = null
 
   constructor(
     private router: Router,

@@ -58,8 +58,8 @@
     class="nav float-right"
     *ngIf="isLoggedUser"
   >
-    <li>
-      {{loggedUserName}}
+    <li class="mr-1">
+      {{loggedUserName | userDisplayName}}
     </li>
     <li>
       <a
